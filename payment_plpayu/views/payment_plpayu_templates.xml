@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="plpayu_acquirer_button">
+        <form t-if="acquirer.plpayu_pos_id" t-att-action="tx_url" method="post" target="_self">
+            <input type="hidden" name="amount" t-att-value='amount' />
+            <input type="hidden" name="client_ip" t-att-value='client_ip' />
+            <input type="hidden" name="desc" t-att-value='desc' />
+            <input type="hidden" name="email" t-att-value='email' />
+            <input type="hidden" name="first_name" t-att-value='first_name' />
+            <input type="hidden" name="js" t-att-value='js' />
+            <input type="hidden" name="last_name" t-att-value='last_name' />
+            <input type="hidden" name="pos_auth_key" t-att-value='pos_auth_key' />
+            <input type="hidden" name="pos_id" t-att-value='pos_id' />
+            <input type="hidden" name="session_id" t-att-value='session_id' />
+            <input type="hidden" name="ts" t-att-value='ts'/>
+            <input type="hidden" name="sig"  t-att-value='sig' />
+            <!-- submit -->
+            <button type="submit" width="100px" t-att-class="submit_class">
+                <img t-if="not submit_txt" src="/payment_plpayu/static/src/img/plpayu_icon.png"/>
+                <span t-if="submit_txt"><t t-esc="submit_txt"/> <span class="fa fa-long-arrow-right"/></span>
+            </button>
+        </form>
+    </template>
+</odoo>

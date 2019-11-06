@@ -1,0 +1,47 @@
+id,chart_template_id:id,code,name,user_type_id:id,reconcile
+pl1_01_0,pl_micro_vat_template,01-0,Środki Trwałe,account.data_account_type_non_current_assets,FALSE
+pl1_02_0,pl_micro_vat_template,02-0,Wartości niematerialne i prawne,account.data_account_type_non_current_assets,FALSE
+pl1_07_0,pl_micro_vat_template,07-0,Odpisy umorzeniowe środków trwałych,account.data_account_type_depreciation,FALSE
+pl1_07_1,pl_micro_vat_template,07-1,Odpisy umorzeniowe wartości niematerialnych i prawnych,account.data_account_type_depreciation,FALSE
+pl1_10_0,pl_micro_vat_template,10-0,Środki pieniężne w kasie,account.data_account_type_liquidity,FALSE
+pl1_12_0,pl_micro_vat_template,12-0,Inne środki pieniężne,account.data_account_type_liquidity,FALSE
+pl1_13_0,pl_micro_vat_template,13-0,Rachunek bieżący w banku,account.data_account_type_liquidity,FALSE
+pl1_20_0,pl_micro_vat_template,20-0,Rozrachunki z odbiorcami,account.data_account_type_receivable,TRUE
+pl1_20_1,pl_micro_vat_template,20-1,Rozrachunki z dostawcami,account.data_account_type_payable,TRUE
+pl1_22_0,pl_micro_vat_template,22-0,Rozrachunki z urzędem skarbowym inne,account.data_account_type_payable,TRUE
+pl1_22_1,pl_micro_vat_template,22-1,Rozrachunki z urzędem skarbowym z tytułu VAT,account.data_account_type_payable,TRUE
+pl1_22_1_203,pl_micro_vat_template,22-1-203,VAT naliczony-3%,account.data_account_type_payable,TRUE
+pl1_22_1_204,pl_micro_vat_template,22-1-204,VAT naliczony-23%,account.data_account_type_payable,TRUE
+pl1_22_1_205,pl_micro_vat_template,22-1-205,VAT naliczony-8%,account.data_account_type_payable,TRUE
+pl1_22_1_206,pl_micro_vat_template,22-1-206,VAT naliczony-5%,account.data_account_type_payable,TRUE
+pl1_22_1_303,pl_micro_vat_template,22-1-303,VAT-3%,account.data_account_type_payable,TRUE
+pl1_22_1_304,pl_micro_vat_template,22-1-304,VAT-23%,account.data_account_type_payable,TRUE
+pl1_22_1_305,pl_micro_vat_template,22-1-305,VAT-8%,account.data_account_type_payable,TRUE
+pl1_22_1_306,pl_micro_vat_template,22-1-306,VAT-5%,account.data_account_type_payable,TRUE
+pl1_22_5,pl_micro_vat_template,22-5,Rozrachunki publicznoprawne z ZUS,account.data_account_type_payable,TRUE
+pl1_22_9,pl_micro_vat_template,22-9,Pozostałe rozrachunki publicznoprawne,account.data_account_type_payable,TRUE
+pl1_23_0,pl_micro_vat_template,23-0,Rozrachunki z pracownikami,account.data_account_type_payable,TRUE
+pl1_24_0,pl_micro_vat_template,24-0,Pozostałe rozrachunki,account.data_account_type_payable,TRUE
+pl1_30_0,pl_micro_vat_template,30-0,Rozliczenie zakupu,account.data_account_type_current_assets,TRUE
+pl1_33_0,pl_micro_vat_template,33-0,Towary,account.data_account_type_current_assets,FALSE
+pl1_40_0,pl_micro_vat_template,40-0,Koszty według rodzajów i ich rozliczenie,account.data_account_type_expenses,FALSE
+pl1_40_1,pl_micro_vat_template,40-1,Zużycie materiałów i energii,account.data_account_type_expenses,FALSE
+pl1_40_2,pl_micro_vat_template,40-2,Usługi obce,account.data_account_type_expenses,FALSE
+pl1_40_3,pl_micro_vat_template,40-3,Podatki i opłaty,account.data_account_type_expenses,FALSE
+pl1_40_4,pl_micro_vat_template,40-4,Wynagrodzenia i narzuty,account.data_account_type_expenses,FALSE
+pl1_40_5,pl_micro_vat_template,40-5,Amortyzacja,account.data_account_type_expenses,FALSE
+pl1_40_6,pl_micro_vat_template,40-6,Pozostałe koszty rodzajowe,account.data_account_type_expenses,FALSE
+pl1_49_0,pl_micro_vat_template,49-0,Rozliczenie kosztów,account.data_account_type_expenses,FALSE
+pl1_60_0,pl_micro_vat_template,60-0,Produkty i rozliczenia międzyokresowe,account.data_account_type_current_assets,FALSE
+pl1_70_0,pl_micro_vat_template,70-0,Przychody ze sprzedaży,account.data_account_type_revenue,FALSE
+pl1_70_1,pl_micro_vat_template,70-1,Koszt własny sprzedaży,account.data_account_type_direct_costs,FALSE
+pl1_75_0,pl_micro_vat_template,75-0,Przychody finansowe,account.data_account_type_revenue,FALSE
+pl1_75_1,pl_micro_vat_template,75-1,Koszty finansowe,account.data_account_type_direct_costs,FALSE
+pl1_76_0,pl_micro_vat_template,76-0,Pozostałe przychody operacyjne,account.data_account_type_revenue,FALSE
+pl1_76_1,pl_micro_vat_template,76-1,Pozostałe koszty operacyjne,account.data_account_type_direct_costs,FALSE
+pl1_76_1_4,pl_micro_vat_template,76-1-4,Pozostałe koszty op. VAT - leasing pojazdu,account.data_account_type_direct_costs,FALSE
+pl1_77_0,pl_micro_vat_template,77-0,Zyski nadzwyczajne,account.data_account_type_revenue,FALSE
+pl1_77_1,pl_micro_vat_template,77-1,Straty nadzwyczajne,account.data_account_type_direct_costs,FALSE
+pl1_80_0,pl_micro_vat_template,80-0,Fundusz podstawowy,account.data_account_type_equity,FALSE
+pl1_86_0,pl_micro_vat_template,86-0,Wynik finansowy,account.data_account_type_equity,FALSE
+pl1_87_0,pl_micro_vat_template,87-0,Obciążenia wyniku finansowego,account.data_account_type_equity,FALSE

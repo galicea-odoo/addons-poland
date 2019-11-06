@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gal_jpk_gal_jpk_document,gal_jpk.gal_jpk.document,model_gal_jpk_document,,1,1,1,1
+access_gal_jpk_gal_jpk_document_type,gal_jpk.gal_jpk.document_type,model_gal_jpk_document_type,,1,1,1,1
+access_gal_jpk_gal_jpk_document_suite,gal_jpk.gal_jpk.document_suite,model_gal_jpk_document_suite,,1,1,1,1

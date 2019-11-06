@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+<record id="pl1_11_0" model="account.account.template">
+  <field name="code">11-0</field>
+  <field name="reconcile" eval="True"/>
+  <field name="user_type_id" ref="account.data_account_type_current_assets"/>
+  <field name="name">Środki pieniężne w drodze</field>
+</record>
+
+<record id="pl_micro_vat_template" model="account.chart.template">
+  <field name="name">Prosty plan kont dla Polski</field>
+  <field name="code_digits">6</field>
+  <field name="currency_id" ref="base.PLN"/>
+  <field name="bank_account_code_prefix">13-0</field>
+  <field name="cash_account_code_prefix">10-0</field>
+  <field name="transfer_account_id" ref="pl1_11_0"/>
+</record>
+
+<record id="pl1_11_0" model="account.account.template">
+  <field name="chart_template_id" ref="pl_micro_vat_template"/>
+</record>        
+
+</data>
+</odoo>

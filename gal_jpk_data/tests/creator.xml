@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+<record id="gal_jpk_data.vat_wizard" model="ir.ui.view">
+  <field name="name">Utworzenie JPK-VAT</field>
+  <field name="model">gal.jpk.vat.wizard</field>
+  <field name="arch" type="xml">
+    <form string="VAT">
+      <group>
+        <div style="width:100%">Przetworzenie polega na wybraniu faktur zakupu oraz sprzedaży
+          i wpisaniu danych z nich do sprawozdania.
+        <br />
+        <b>Zakłada się, że faktury dotyczą zwykłej sprzedaży towarów i usług.</b>
+        <br />
+        Jeśli zachodzą szczególne przypadki - musisz skorygować dane po przetworzeniu.</div>
+
+      </group>
+        <group>
+          <field name="jpk_vat_id" />
+          <field name="delete_old" />
+        </group>
+        <footer>
+          <button string="Przetwórz dokumenty" name="gal_jpk_vat_wizard_fill" type="object" class="oe_highlight"/>
+          <button string="Anuluj" class="oe_link" special="cancel"/>
+      </footer>
+    </form>
+  </field>
+</record>
+
+<record id="gal_jpk_data.vat_wizard2" model="ir.ui.view">
+  <field name="name">Utworzenie JPK-VAT</field>
+  <field name="model">gal.jpk.vat.wizard</field>
+  <field name="arch" type="xml">
+    <form string="VAT">
+      <group>
+        <div>Wykonano</div>
+      </group>
+      <footer>
+        <button string="Zamknij" name="gal_jpk_vat_wizard_close" type="object" class="oe_highlight"/>
+      </footer>
+    </form>
+  </field>
+</record>
+
+
+<record id="action_open_jpk_vat_wizard" model="ir.actions.act_window">
+  <field name="name">JPK - VAT</field>
+  <field name="res_model">gal.jpk.vat.wizard</field>
+  <field name="view_id" ref="gal_jpk_data.vat_wizard"/>
+  <field name="view_type">form</field>
+  <field name="view_mode">tree,form</field>
+  <field name="target">new</field>
+</record>
+
+
+
+  <menuitem name="1. Przygotuj dane JPK-VAT"
+            id="gal_jpk.menu_vat_wizard"
+            action="action_open_jpk_vat_wizard"
+            sequence="1" />
+
+</data>
+</odoo>

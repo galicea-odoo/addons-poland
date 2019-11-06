@@ -1,0 +1,37 @@
+id,chart_template_id:id,code,name,user_type_id:id,reconcile
+pl0_01_0,pl_micro_template,01-0,Środki Trwałe,account.data_account_type_non_current_assets,FALSE
+pl0_02_0,pl_micro_template,02-0,Wartości niematerialne i prawne,account.data_account_type_non_current_assets,FALSE
+pl0_07_0,pl_micro_template,07-0,Odpisy umorzeniowe środków trwałych,account.data_account_type_depreciation,FALSE
+pl0_07_1,pl_micro_template,07-1,Odpisy umorzeniowe wartości niematerialnych i prawnych,account.data_account_type_depreciation,FALSE
+pl0_10_0,pl_micro_template,10-0,Środki pieniężne w kasie,account.data_account_type_liquidity,FALSE
+pl0_12_0,pl_micro_template,12-0,Inne środki pieniężne,account.data_account_type_liquidity,FALSE
+pl0_13_0,pl_micro_template,13-0,Rachunek bieżący w banku,account.data_account_type_liquidity,FALSE
+pl0_20_0,pl_micro_template,20-0,Rozrachunki z odbiorcami,account.data_account_type_receivable,TRUE
+pl0_20_1,pl_micro_template,20-1,Rozrachunki z dostawcami,account.data_account_type_payable,TRUE
+pl0_22_0,pl_micro_template,22-0,Rozrachunki z urzędem skarbowym,account.data_account_type_payable,TRUE
+pl0_22_5,pl_micro_template,22-5,Rozrachunki publicznoprawne z ZUS,account.data_account_type_payable,TRUE
+pl0_22_9,pl_micro_template,22-9,Pozostałe rozrachunki publicznoprawne,account.data_account_type_payable,TRUE
+pl0_23_0,pl_micro_template,23-0,Rozrachunki z pracownikami,account.data_account_type_payable,TRUE
+pl0_24_0,pl_micro_template,24-0,Pozostałe rozrachunki,account.data_account_type_payable,TRUE
+pl0_30_0,pl_micro_template,30-0,Rozliczenie zakupu,account.data_account_type_current_assets,TRUE
+pl0_33_0,pl_micro_template,33-0,Towary,account.data_account_type_current_assets,FALSE
+pl0_40_0,pl_micro_template,40-0,Koszty według rodzajów i ich rozliczenie,account.data_account_type_expenses,FALSE
+pl0_40_1,pl_micro_template,40-1,Zużycie materiałów i energii,account.data_account_type_expenses,FALSE
+pl0_40_2,pl_micro_template,40-2,Usługi obce,account.data_account_type_expenses,FALSE
+pl0_40_3,pl_micro_template,40-3,Podatki i opłaty,account.data_account_type_expenses,FALSE
+pl0_40_4,pl_micro_template,40-4,Wynagrodzenia i narzuty,account.data_account_type_expenses,FALSE
+pl0_40_5,pl_micro_template,40-5,Amortyzacja,account.data_account_type_expenses,FALSE
+pl0_40_6,pl_micro_template,40-6,Pozostałe koszty rodzajowe,account.data_account_type_expenses,FALSE
+pl0_49_0,pl_micro_template,49-0,Rozliczenie kosztów,account.data_account_type_expenses,FALSE
+pl0_60_0,pl_micro_template,60-0,Produkty i rozliczenia międzyokresowe,account.data_account_type_current_assets,FALSE
+pl0_70_0,pl_micro_template,70-0,Przychody ze sprzedaży,account.data_account_type_revenue,FALSE
+pl0_70_1,pl_micro_template,70-1,Koszt własny sprzedaży,account.data_account_type_direct_costs,FALSE
+pl0_75_0,pl_micro_template,75-0,Przychody finansowe,account.data_account_type_revenue,FALSE
+pl0_75_1,pl_micro_template,75-1,Koszty finansowe,account.data_account_type_direct_costs,FALSE
+pl0_76_0,pl_micro_template,76-0,Pozostałe przychody operacyjne,account.data_account_type_revenue,FALSE
+pl0_76_1,pl_micro_template,76-1,Pozostałe koszty operacyjne,account.data_account_type_direct_costs,FALSE
+pl0_77_0,pl_micro_template,77-0,Zyski nadzwyczajne,account.data_account_type_revenue,FALSE
+pl0_77_1,pl_micro_template,77-1,Straty nadzwyczajne,account.data_account_type_direct_costs,FALSE
+pl0_80_0,pl_micro_template,80-0,Fundusz podstawowy,account.data_account_type_equity,FALSE
+pl0_86_0,pl_micro_template,86-0,Wynik finansowy,account.data_account_type_equity,FALSE
+pl0_87_0,pl_micro_template,87-0,Obciążenia wyniku finansowego,account.data_account_type_equity,FALSE

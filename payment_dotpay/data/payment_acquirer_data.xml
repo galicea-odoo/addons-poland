@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="payment_dotpay.payment_acquirer_dotpay" model="payment.acquirer">
+            <field name="name">dotpay</field>
+            <field name="image" type="base64" file="payment_dotpay/static/src/img/dotpay_icon.png"/>
+            <field name="provider">dotpay</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="view_template_id" ref="dotpay_acquirer_button"/>
+            <field name="environment">test</field>
+            <field name="pre_msg"><![CDATA[
+<p>Po kliknięciu zostaniesz przeniesiony na stronę płatności DotPay.</p>]]></field>
+            <field name="dotpay_pos_id">99999</field>
+            <field name="dotpay_pin">pin uzyskany z Dotpay</field>
+            <field name="dotpay_urlc">tu woisz adres URL komunikacji z Dotpay</field>
+            <field name="dotpay_url">tu wpisz adres do którego ma wrócić płacący</field>
+        </record>
+
+    </data>
+</odoo>

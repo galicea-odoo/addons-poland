@@ -1,0 +1,17 @@
+Co zwraca Dotpay:
+ {'channel': u'1',
+ 'control': u'3',
+ 'description': u'SO001x1',
+ 'email': u'jurek.wawro@...............',
+ 'id': u'346801',
+ 'operation_amount': u'10.00',
+ 'operation_currency': u'PLN',
+ 'operation_datetime': u'2018-03-17 14:09:17',
+ 'operation_number': u'M6866-6145',
+ 'operation_original_amount': u'10.00',
+ 'operation_original_currency': u'PLN',
+ 'operation_status': u'completed',
+ 'operation_type': u'payment',
+ 'p_email': u'fundacja@galicea.org',
+ 'p_info': u'PODKARPACKA FUNDACJA WSPIERANIA INNOWACJI GALICEA',
+ 'signature': u'8..........................'}

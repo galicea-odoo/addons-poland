@@ -1,0 +1,101 @@
+<odoo>
+  <data>
+
+<record id="gal_jpk.document_vat_form2" model="ir.ui.view">
+  <field name="name">JPK vat</field>
+  <field name="model">gal.jpk.vat</field>
+  <field name="inherit_id" ref="gal_jpk_data.vat_form"/>
+  <field name="arch" type="xml">
+      <div class="oe_button_box" name="button_box" position="inside">
+                <button class="oe_stat_button" type="action"
+                            name="%(gal_jpk.action_vat_data_wizard)d" icon="fa-pencil-square-o"
+                            context="{'res_id':id}"
+                            domain="[('jpk_vat_id','=',id)]"  >
+                            <div class="o_stat_info">
+                            <span class="o_stat_text"> Generuj plik </span>
+                       </div>
+                     <field name="id"  invisible="1" />
+                </button>
+                <!-- button class="oe_stat_button" type="action"
+                            name="gal_jpk.action_open_vat_data_wizard" icon="fa-pencil-square-o"
+                            context="{'res_id':id}"  >
+                            <div class="o_stat_info">
+                            <span class="o_stat_text"> Generuj plik (Py) </span>
+                       </div>
+                     <field name="id"  invisible="1" />
+                </button -->
+      </div>
+      <field name="komentarz" position="after">
+           <field name="xml_file" widget="url"  class="oe_read_only" />
+      </field>
+
+  </field>
+</record>
+
+<record id="gal_jpk.braknip" model="ir.ui.view">
+  <field name="name">Utworzenie JPK-VAT</field>
+  <field name="model">gal.jpk.vat</field>
+  <field name="arch" type="xml">
+    <form string="VAT">
+      <group>
+        <div>Najpierw uzupełnij dane firmy, wpisz w parametrach poprawny NIP i adres email.</div>
+      </group>
+      <footer>
+        <button string="Zamknij" class="oe_link" special="cancel"/>
+      </footer>
+    </form>
+  </field>
+</record>
+
+<record id="gal_jpk.vat_result" model="ir.ui.view">
+  <field name="name">Utworzenie JPK-VAT</field>
+  <field name="model">gal.jpk.vat</field>
+  <field name="arch" type="xml">
+    <form string="VAT">
+      <group>
+        <div>Wykonano</div>
+      </group>
+      <footer>
+        <button string="Zamknij" class="oe_link" special="cancel"/>
+      </footer>
+    </form>
+  </field>
+</record>
+
+
+      <!-- record id="action_gal_jpk_braknip" model="ir.actions.act_window">
+        <field name="name">JPK-VAT</field>
+        <field name="res_model">gal.jpk.vat</field>
+        <field name="view_id" ref="gal_jpk_data.braknip"/>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="target">main</field>
+      </record -->
+
+      <record id="action_open_vat_data_wizard" model="ir.actions.act_window">
+        <field name="name">JPK-VAT</field>
+        <field name="res_model">gal.jpk.vat.wizard</field>
+  <field name="view_id" ref="gal_jpk.vat_xml_wizard"/>
+  <field name="view_type">form</field>
+  <field name="view_mode">tree,form</field>
+  <field name="target">new</field>
+      </record>
+
+      <record id="action_gal_jpk_document_vat1" model="ir.actions.act_window">
+        <field name="name">JPK-VAT</field>
+        <field name="res_model">gal.jpk.vat</field>
+        <field name="view_id" ref="gal_jpk_data.vat_tree"/>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="target">main</field>
+      </record>
+
+        <menuitem
+          name="JPK-VAT"
+          parent="gal_jpk.menu_root"
+          id="gal_jpk.menu_vat"
+          action="action_gal_jpk_document_vat1"
+          sequence="10" />
+
+  </data>
+</odoo>

@@ -1,0 +1,44 @@
+<odoo>
+  <data>
+    <record id="gal_jpk_kr" model="gal.jpk.document_type">
+      <field name="name">Księgi rachunkowe</field>
+      <field name="identifier">kr</field>
+      <field name="root_element">JPK</field>
+    </record>
+    <record id="gal_jpk_wb" model="gal.jpk.document_type">
+      <field name="name">Wyciąg bankowy</field>
+      <field name="identifier">wb</field>
+      <field name="root_element">JPK</field>
+    </record>
+    <record id="gal_jpk_mag" model="gal.jpk.document_type">
+      <field name="name">Magazyn</field>
+      <field name="identifier">mag</field>
+      <field name="root_element">JPK</field>
+    </record>
+    <record id="gal_jpk_vat" model="gal.jpk.document_type">
+      <field name="name">Ewidencje zakupu i sprzedaży VAT</field>
+      <field name="identifier">vat</field>
+      <field name="root_element">JPK</field>
+    </record>
+    <record id="gal_jpk_fa_vat" model="gal.jpk.document_type">
+      <field name="name">Faktury VAT</field>
+      <field name="identifier">fa</field>
+      <field name="root_element">JPK</field>
+    </record>
+    <record id="gal_jpk_pkpir" model="gal.jpk.document_type">
+      <field name="name">Podatkowa księga przychodów i rozchodów</field>
+      <field name="identifier">pkpir</field>
+      <field name="root_element">JPK</field>
+    </record>
+    <record id="gal_jpk_ewp" model="gal.jpk.document_type">
+      <field name="name">Ewidencja przychodów</field>
+      <field name="identifier">ewp</field>
+      <field name="root_element">JPK</field>
+    </record>
+    <record id="gal_vat7" model="gal.jpk.document_type">
+      <field name="name">VAT-7</field>
+      <field name="identifier">vat7</field>
+      <field name="root_element">Deklaracja</field>
+    </record>
+  </data>
+</odoo>

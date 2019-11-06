@@ -1,0 +1,3 @@
+wersja 0.2
+
+Odnotowywanie wpłat (sygnał z PayU)

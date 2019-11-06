@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    
+<record id="gal_jpk_data.zakup_tree" model="ir.ui.view">
+  <field name="name">JPK Zakupy</field>
+  <field name="model">gal.jpk.zakup</field>
+  <field name="arch" type="xml">
+    <tree>
+        <field name="NrDostawcy" />
+        <field name="NazwaDostawcy" />
+        <field name="DowodZakupu" />
+        <field name="DataZakupu" />
+        <field name="K_45" />
+        <field name="K_46" />
+        <field name="K_43" />
+        <field name="K_44" />
+        <field name="K_47" />
+        <field name="K_48" />
+        <field name="K_49" />
+        <field name="K_50" />
+    </tree>
+  </field>
+</record>
+
+<record id="gal_jpk_data.zakup_form" model="ir.ui.view">
+  <field name="name">JPK Zakupy</field>
+  <field name="model">gal.jpk.zakup</field>
+  <field name="arch" type="xml">
+  
+    <form string="Zakupy">
+      <field name='jpk_vat_id' invisible="1"/> <!-- drop down -->
+      <sheet>
+        <group col="4">
+          <field name="LpZakupu" />
+          <field name="NrDostawcy" />
+        </group>
+        <group>
+          <field name="NazwaDostawcy" />
+          <field name="AdresDostawcy" />
+          <field name="DowodZakupu" />
+        </group>
+        <group col="4">
+          <field name="DataZakupu" />
+          <field name="DataWplywu" />
+        </group>
+        <separator string="Zakup/podatki"/>
+
+        <group col="4">
+
+          <field name="K_43" />
+          <field name="K_44" />
+          <field name="K_45" />
+          <field name="K_46" />
+          <field name="K_47" />
+          <field name="K_48" />
+          <field name="K_49" />
+          <field name="K_50" />
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+  
+<record id="gal_jpk_data.sprzedaz_form" model="ir.ui.view">
+  <field name="name">JPK Sprzedaż</field>
+  <field name="model">gal.jpk.sprzedaz</field>
+  <field name="arch" type="xml">
+    <form string="Sprzedaż">
+      <field name='jpk_vat_id' invisible="1"/>
+      <sheet>
+        <group col="4">
+          <field name="LpSprzedazy" />
+          <field name="NrKontrahenta" />
+        </group>
+        <group>
+          <field name="NazwaKontrahenta" />
+          <field name="AdresKontrahenta" />
+          <field name="DowodSprzedazy" />
+        </group>
+        <group col="4">
+          <field name="DataWystawienia" />
+          <field name="DataSprzedazy" />
+        </group>
+        <separator string="Sprzedaż/podatki"/>
+        <group col="4">
+          <field name="K_19" />
+          <field name="K_20" />
+          <field name="K_17" />
+          <field name="K_18" />
+          <field name="K_15" />
+          <field name="K_16" />
+          <field name="K_10" />
+
+
+          <field name="K_11" />
+          <field name="K_12" />
+          <field name="K_13" />
+          <field name="K_14" />
+          <field name="K_17" />
+          <field name="K_18" />
+          <field name="K_21" />
+          <field name="K_22" />
+          <field name="K_23" />
+          <field name="K_24" />
+          <field name="K_25" />
+          <field name="K_26" />
+          <field name="K_27" />
+          <field name="K_28" />
+          <field name="K_29" />
+          <field name="K_30" />
+          <field name="K_31" />
+          <field name="K_32" />
+          <field name="K_33" />
+          <field name="K_34" />
+          <field name="K_35" />
+          <field name="K_36" />
+          <field name="K_37" />
+          <field name="K_38" />
+          <field name="K_39" />
+        </group>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+  
+<record id="gal_jpk_data.sprzedaz_tree" model="ir.ui.view">
+  <field name="name">JPK Sprzedaż</field>
+  <field name="model">gal.jpk.sprzedaz</field>
+  <field name='jpk_vat_id'/>
+  <field name="arch" type="xml">
+    <tree editable="top">
+      <field name="LpSprzedazy" />
+      <field name="NrKontrahenta" />
+      <field name="NazwaKontrahenta" />
+      <field name="AdresKontrahenta" />
+      <field name="DowodSprzedazy" />
+      <field name="DataWystawienia" />
+      <field name="DataSprzedazy" />
+          <field name="K_19" />
+          <field name="K_20" />
+          <field name="K_17" />
+          <field name="K_18" />
+          <field name="K_15" />
+          <field name="K_16" />
+          <field name="K_10" />
+
+    </tree>
+  </field>
+</record>
+
+
+<record id="gal_jpk_data.vat_tree" model="ir.ui.view">
+  <field name="name">JPK vat</field>
+  <field name="model">gal.jpk.vat</field>
+  <field name="arch" type="xml">
+    <tree string="JPK-VAT">
+      <field name="CelZlozenia" />
+      <field name="DataWytworzeniaJPK" />
+      <field name="DataOd" />
+      <field name="DataDo" />
+      <field name="komentarz" />
+    </tree>
+  </field>
+</record>
+
+<record id="gal_jpk_data.vat_form" model="ir.ui.view">
+  <field name="name">JPK vat</field>
+  <field name="model">gal.jpk.vat</field>
+  <field name="arch" type="xml">
+    <form string="VAT"  style="width:100%;margin:0px!important;">
+      <sheet style="width:100%;margin:0px!important;">
+        <div class="oe_button_box" name="button_box">
+
+        </div>
+        <group col="4" name="hdr">
+          <field name="CelZlozenia" />
+          <field name="DataWytworzeniaJPK" />
+          <field name="DataOd" />
+          <field name="DataDo" />
+        </group>
+        <group col="2">
+          <field name="komentarz" />
+        </group>
+        <notebook>
+          <page string="Zakupy">
+            <field name="zakup_ids" mode="tree">
+              <!-- widget="one2many_list" -->
+              <tree>
+                <field name="NrDostawcy" />
+                <field name="NazwaDostawcy" />
+                <field name="DowodZakupu" />
+                <field name="DataZakupu" />
+                <field name="K_45" sum="Razem" widget="monetary" />
+                <field name="K_46" sum="Razem" widget="monetary" />
+                <field name="K_43" sum="Razem" widget="monetary"/>
+                <field name="K_44" sum="Razem" widget="monetary" />
+                <field name="K_47" sum="Razem" widget="monetary" />
+                <field name="K_48" sum="Razem" widget="monetary" />
+                <field name="K_49" sum="Razem" widget="monetary" />
+                <field name="K_50" sum="Razem" widget="monetary" />
+              </tree>
+              <!-- form string="Zakupy" editable="top">
+              <field name="LpZakupu" />
+              <field name="NrDostawcy" />
+              <field name="NazwaDostawcy" />
+              <field name="AdresDostawcy" />
+              <field name="DowodZakupu" />
+              <field name="DataZakupu" />
+              <field name="DataWplywu" />
+              <field name="K_43" />
+              <field name="K_44" />
+              </form -->
+            </field>
+          </page>
+          <page string="Sprzedaż">
+            <field name="sprzedaz_ids" mode="tree">
+              <!-- widget="one2many_list" -->
+              <tree>
+                <!-- editable="top" -->
+                <field name="LpSprzedazy" />
+                <field name="NrKontrahenta" />
+                <field name="NazwaKontrahenta" />
+                <field name="AdresKontrahenta" />
+                <field name="DowodSprzedazy" />
+                <field name="DataSprzedazy" />
+                <field name="K_19" sum="Razem" widget="monetary" />
+                <field name="K_20" sum="Razem" widget="monetary" />
+                <field name="K_17" sum="Razem" widget="monetary" />
+                <field name="K_18" sum="Razem" widget="monetary" />
+                <field name="K_15" sum="Razem" widget="monetary" />
+                <field name="K_16" sum="Razem" widget="monetary" />
+                <field name="K_10" sum="Razem" widget="monetary" />
+              </tree>
+              <!-- form string="Zakupy" editable="bottom"><field name="LpSprzedazy" />
+              ...
+              </form -->
+            </field>
+          </page>
+        </notebook>
+      </sheet>
+    </form>
+  </field>
+</record>
+
+
+
+  
+<record id="action_gal_jpk_zakup" model="ir.actions.act_window">
+  <field name="name">JPK - zakupy</field>
+  <field name="res_model">gal.jpk.zakup</field>
+  <field name="view_id" ref="gal_jpk_data.zakup_tree"/>
+  <field name="view_type">form</field>
+  <field name="view_mode">tree,form</field>
+  <field name="target">current</field>
+</record>
+
+<record id="action_gal_jpk_sprzedaz" model="ir.actions.act_window">
+  <field name="name">JPK - sprzedaz</field>
+  <field name="res_model">gal.jpk.sprzedaz</field>
+  <field name="view_id" ref="gal_jpk_data.sprzedaz_tree"/>
+  <field name="view_type">form</field>
+  <field name="view_mode">tree,form</field>
+  <field name="target">current</field>
+</record>
+
+<record id="action_gal_jpk_vat" model="ir.actions.act_window">
+  <field name="name">JPK - VAT</field>
+  <field name="res_model">gal.jpk.vat</field>
+  <field name="view_id" ref="gal_jpk_data.vat_tree"/>
+  <field name="view_type">form</field>
+  <field name="view_mode">tree,form</field>
+  <field name="target">main</field>
+</record>
+
+<record id="action_gal_jpk_vat_form" model="ir.actions.act_window">
+  <field name="name">JPK - VAT</field>
+  <field name="res_model">gal.jpk.vat</field>
+  <field name="view_id" ref="gal_jpk_data.vat_form"/>
+  <field name="view_type">form</field>
+  <field name="view_mode">form</field>
+  <field name="target">main</field>
+</record>
+
+  <!--
+  <menuitem name="JPK Przejrzyj / skoryguj" 
+     id="gal_jpk_data.menu_data" 
+     action="action_gal_jpk_vat"
+     sequence="0" />
+
+  <menuitem name="JPK - vat" 
+     parent="gal_jpk_data.menu_data" id="gal_jpk_data.menu_vat"
+     action="action_gal_jpk_vat"
+     sequence="1" />
+
+  <menuitem name="JPK - vat - form" 
+     parent="gal_jpk_data.menu_data" id="gal_jpk_data.menu_vat"
+     action="action_gal_jpk_vat_form"
+     sequence="1" />
+
+  <menuitem name="Wszystkie dane VAT - zakup" 
+     parent="gal_jpk_data.menu_data" id="gal_jpk_data.menu_zakup"
+     action="action_gal_jpk_zakup" />
+
+  <menuitem name="Wszystkie dane VAT - sprzedaż" 
+     parent="gal_jpk_data.menu_data" id="gal_jpk_data.menu_sprzedaz"
+     action="action_gal_jpk_sprzedaz" />
+-->
+
+  <!-- menuitem
+          name="3. Generuj plik XML"
+          parent="gal_jpk_data.menu_data" 
+          id="gal_jpk_data.menu_files"
+          action="gal_jpk_data.action_gal_jpk_document_suites"
+          sequence="3" / -->
+
+</data>
+</odoo>

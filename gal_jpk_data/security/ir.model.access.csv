@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gal_jpk_data_gal_jpk_vat,gal_jpk_data.gal.jpk.vat,model_gal_jpk_vat,,1,1,1,1
+access_gal_jpk_data_gal_jpk_vat_invoice,gal_jpk_data.gal.jpk.vat.invoice,model_gal_jpk_vat_invoice,,1,1,1,1
+access_gal_jpk_data_gal_jpk_zakup,gal_jpk_data.gal.jpk.zakup,model_gal_jpk_zakup,,1,1,1,1
+access_gal_jpk_data_gal_jpk_sprzedaz,gal_jpk_data.gal.jpk.sprzedaz,model_gal_jpk_sprzedaz,,1,1,1,1

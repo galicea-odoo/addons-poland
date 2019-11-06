@@ -1,0 +1,67 @@
+<odoo>
+  <data>
+        <record id="view_form_gal_jpk_document_suite" model="ir.ui.view">
+          <field name="name">JPK Document suite</field>
+          <field name="model">gal.jpk.document_suite</field>
+          <field name="arch" type="xml">
+            <form edit="false">
+              <group>
+                <field name="date_from" />
+                <field name="date_until" />
+                <field name="document_types" class="oe_edit_only"
+                    widget="many2many_checkboxes" />
+                <field name="documents" class="oe_read_only">
+                  <tree>
+                     <field name="name"/>
+                     <field name="xml_file" widget="url" />
+                  </tree>
+                </field>
+              </group>
+            </form>
+          </field>
+        </record>
+
+        <record id="view_tree_gal_jpk_document_suite" model="ir.ui.view">
+          <field name="name">JPK Document suite list</field>
+          <field name="model">gal.jpk.document_suite</field>
+          <field name="arch" type="xml">
+            <tree>
+              <field name="id" />
+              <field name="date_from" />
+              <field name="date_until" />
+              <field name="document_types" />
+            </tree>
+          </field>
+        </record>
+
+        <record id="view_form_gal_jpk_document" model="ir.ui.view">
+          <field name="name">JPK Document</field>
+          <field name="model">gal.jpk.document</field>
+          <field name="arch" type="xml">
+            <form>
+              <group>
+                <field name="name" />
+              </group>
+            </form>
+          </field>
+        </record>
+
+        <act_window id="action_gal_jpk_document_suites"
+            name="Jednolity Plik Kontrolny"
+            res_model="gal.jpk.document_suite"
+            view_mode="tree,form" />
+
+        <menuitem
+          name="Jednolity Plik Kontrolny"
+          parent="account_gal.menu_account_gal"
+          id="gal_jpk.menu_root" />
+
+        <menuitem
+          name="Zestawy dokumentów"
+          parent="gal_jpk.menu_root"
+          id="gal_jpk.menu_suites"
+          action="action_gal_jpk_document_suites"
+          sequence="30" />
+
+  </data>
+</odoo>

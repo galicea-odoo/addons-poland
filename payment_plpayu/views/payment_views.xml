@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_acquirer_form_plpayu" model="ir.ui.view">
+        <field name="name">payment.acquirer.form.inherit</field>
+        <field name="model">payment.acquirer</field>
+        <field name="inherit_id" ref="payment.acquirer_form"/>
+        <field name="arch" type="xml">
+            <xpath expr='//group[@name="acquirer"]' position='after'>
+                <group attrs="{'invisible': [('provider', '!=', 'plpayu')]}">
+                    <field name="plpayu_pos_id"/>
+                    <field name="plpayu_pos_auth_key"/>
+                    <field name="plpayu_key_md5"/>
+                    <field name="plpayu_key2_md5"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

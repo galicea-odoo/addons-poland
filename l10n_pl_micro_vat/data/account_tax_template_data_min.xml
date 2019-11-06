@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+    
+<!-- Account Tags -->
+<record id="pl1_tag_Z23" model="account.account.tag">
+  <field name="name">vat Z23</field>
+  <field name="applicability">taxes</field>
+</record>
+
+<record id="pl1_tag_V23" model="account.account.tag">
+  <field name="name">vat V23</field>
+  <field name="applicability">taxes</field>
+</record>
+
+<record id="pl1_vs_kraj_23" model="account.tax.template">
+  <field name="chart_template_id" ref="pl_micro_vat_template"/>
+  <field name="description">VAT-23%</field>
+  <field name="name">V23</field>
+  <field name="amount">23</field>
+  <field name="amount_type">percent</field>
+  <field name="type_tax_use">sale</field>
+  <field name="sequence" eval="1"/>
+  <field name="account_id" ref="pl1_22_1_304"/>
+  <field name="tag_ids" eval="[(6,0,[ref('pl1_tag_V23')])]"/>
+</record>
+
+<record id="pl1_vz_kraj_23" model="account.tax.template">
+  <field name="chart_template_id" ref="pl_micro_vat_template"/>
+  <field name="description">VAT naliczony-23%</field>
+  <field name="name">Z23</field>
+  <field name="amount">23</field>
+  <field name="amount_type">percent</field>
+  <field name="sequence" eval="2"/>
+  <field name="type_tax_use">purchase</field>
+  <field name="refund_account_id" ref="pl1_22_1_204"/>
+  <field name="tag_ids" eval="[(6,0,[ref('pl1_tag_Z23')])]"/>
+</record>
+
+</data>
+</odoo>

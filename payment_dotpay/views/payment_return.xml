@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="payment_return_dotpay" name="Thanks">
+      <t t-call="website.layout">
+            <div id="wrap">
+                <div class="oe_structure" />
+                <div class="container">
+                    <h1>DZIĘKUJEMY</h1>
+                    <div class="row">
+                        <div class="col-sm-12">
+<spam t-esc="message"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="oe_structure"></div>
+            </div>
+        </t>
+    </template>
+</odoo>
