@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="dotpay_acquirer_button">
-        <form t-if="acquirer.dotpay_pos_id" t-att-action="tx_url" method="post" target="_self">
-
-            <!-- input name="pid" t-att-value='pid'  / -->
-            <!-- input name="buttontext" t-att-value='buttontext' / -->
-
+            <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
             <input name="api_version" t-att-value='api_version' type="hidden" />
             <input name="id" t-att-value='id'  type="hidden" />
             <input name="amount" t-att-value='amount'  type="hidden" />
@@ -18,20 +14,6 @@
             <input name="type" t-att-value='type' type="hidden" />
             <input name="url" t-att-value='url' type="hidden" />
             <input name="urlc" t-att-value='urlc' type="hidden" />
-            <!-- input name="channel" t-att-value='channel' />
-            <input name="ch_lock" t-att-value='ch_lock' / -->
-            <!-- input name="credit_card_store" t-att-value='credit_card_store' />
-            <input name="credit_card_customer_id" t-att-value='credit_card_customer_id' / -->
-
             <input name="chk"  t-att-value='chk' type="hidden" />
-
-
-
-            <!-- submit -->
-            <button type="submit" width="100px" t-att-class="submit_class">
-                <img t-if="not submit_txt" src="/payment_dotpay/static/src/img/dotpay_icon.png"/>
-                <span t-if="submit_txt"><t t-esc="submit_txt"/> <span class="fa fa-long-arrow-right"/></span>
-            </button>
-        </form>
     </template>
 </odoo>

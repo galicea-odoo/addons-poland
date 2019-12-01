@@ -86,7 +86,7 @@ chk=SHA-256(suma)
 class PaymentAcquirerDotpay(models.Model):
     _inherit = 'payment.acquirer'
 
-    test = True
+    test = False
     test_pos_id = 123456
 
     provider = fields.Selection(selection_add=[('dotpay', 'Dotpay')])
@@ -104,7 +104,7 @@ class PaymentAcquirerDotpay(models.Model):
             except:
                 return ''
 
-        DotpayPin=self.dotpay_pin
+        DotpayPin=str(self.dotpay_pin)
         chk = DotpayPin+ \
          v('api_version')+ \
          v('charset')+ \
@@ -175,14 +175,14 @@ class PaymentAcquirerDotpay(models.Model):
          v('ignore_last_payment_channel')        # pominieto MultiMerchantList
         #3deab373c427df84e53bbee01dff220539553056d8456108ff3c7234
         # but expected Chk "4a33e6f894476a462fd9f70f91a1dbfce58b0db2d89b1b5eeacc89d9c578b206"
-        return hashlib.sha256(chk).hexdigest()
+        return hashlib.sha256(chk.encode('ascii')).hexdigest()
 
 
     @api.multi
     def dotpay_form_generate_values(self, values):
         self.ensure_one()
         base_url = self.env['ir.config_parameter'].get_param('web.base.url')
-        self.test = False
+#        self.test = False
         dotpay_values = dict()
 
         if self.test:
@@ -219,7 +219,6 @@ class PaymentAcquirerDotpay(models.Model):
             dotpay_values['id'] = self.dotpay_pos_id
             dotpay_values['amount']=values['amount']
             dotpay_values['currency']='PLN'
-            dotpay_values["chk"] = self.compute_chk(dotpay_values)
             dotpay_values['description'] = reference
             dotpay_values['control'] = control
             dotpay_values['firstname'] = values.get('partner_name')
@@ -256,7 +255,7 @@ class PaymentAcquirerDotpay(models.Model):
     @api.multi
     def dotpay_get_form_action_url(self):
         self.ensure_one()
-        self.test=True
+#        self.test=True
         if self.test:
             return 'https://ssl.dotpay.pl/t2/'
         else:
@@ -289,11 +288,13 @@ class PaymentTransactionDotpay(models.Model):
         else:
             transaction = self.search([('reference', '=', control)])
         if not transaction:
-#            error_msg = (_('Dotpay: received data for reference %s no order found') % (partner_id))
-            return self #raise ValidationError(error_msg)
+            error_msg = (_('Dotpay: received data for reference %s no order found') % (partner_id))
+            raise ValidationError(error_msg)
+#            return self #
         elif len(transaction) > 1:
-#            error_msg = (_('Dotpay: received data for reference %s multiple orders found') % (partner_id))
-            return self #raise ValidationError(error_msg)
+            error_msg = (_('Dotpay: received data for reference %s multiple orders found') % (partner_id))
+            raise ValidationError(error_msg)
+#            return self #
         return transaction
 
     @api.multi
